@@ -15,3 +15,11 @@ def color_limits(color):
     return lower_limit, upper_limit
 
 
+COLORS = {
+    "red": np.array([255, 0, 0]),
+    "green": np.array([0, 255, 0]),
+    "blue": np.array([0, 0, 255]),
+    "yellow": np.array([255, 255, 0]),
+    "purple": np.array([255, 0, 255]),
+    "cyan": np.array([0, 255, 255])
+}
