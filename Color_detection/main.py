@@ -1,7 +1,7 @@
 import cv2
 import sys
+import os
 from utils import *
-
 
 if not display_intro():
     sys.exit()
