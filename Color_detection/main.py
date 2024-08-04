@@ -1,10 +1,18 @@
 import cv2
-from util import color_limits
+import sys
+from utils import *
 
+
+if not display_intro():
+    sys.exit()
 
 webcam = cv2.VideoCapture(0)
+
 while True:
     ret, frame = webcam.read()
+
+    if not ret or (cv2.waitKey(1) & 0xFF == ord('q')):
+        break
 
     hsv_image = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     lower_limit, upper_limit = color_limits(255)
@@ -12,8 +20,6 @@ while True:
     mask = cv2.inRange(hsv_image, lower_limit, upper_limit)
 
     cv2.imshow('frame', frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
 
 
 webcam.release()
