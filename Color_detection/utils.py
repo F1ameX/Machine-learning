@@ -37,7 +37,7 @@ def display_intro():
         - Simple Settings: Detects and highlights a user-specified color from the library in the video stream.
     """
     print(intro_message)
-    response = input("Are you familiar with the program features and agree to continue? [y/n]")
+    response = input("Are you familiar with the program features and agree to continue? [y/n] ")
     return response_handler(response)
 
 
@@ -48,7 +48,7 @@ def display_agreement():
     and detect any color you choose in the next step
     """
     print(agree_message)
-    response = input("Do you agree with the rules and are ready to continue? [y/n]")
+    response = input("Do you agree with the rules and are ready to continue? [y/n] ")
     return response_handler(response)
 
 
@@ -65,7 +65,7 @@ def display_selection():
     You can choose any color of this list you want. Just type name of color. Example: yellow. 
     """
     print(selection_message)
-    color = input("What color would you like to detect?")
+    color = input("What color would you like to detect?\n")
     return color_handler(color)
 
 
