@@ -1,9 +1,11 @@
 import cv2
 import sys
-import os
 from utils import *
 
 if not display_intro():
+    sys.exit()
+
+if not display_agreement():
     sys.exit()
 
 webcam = cv2.VideoCapture(0)

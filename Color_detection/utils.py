@@ -37,11 +37,39 @@ def display_intro():
         - Simple Settings: Detects and highlights a user-specified color from the library in the video stream.
     """
     print(intro_message)
-    response = input("You are familiar with the program features and agree to continue? [y/n]")
-    return response_encounter(response)
+    response = input("Are you familiar with the program features and agree to continue? [y/n]")
+    return response_handler(response)
 
 
-def response_encounter(response):
+def display_agreement():
+    agree_message = """
+    The next step is your consent to use the webcam.
+    The application will use the image from your webcam, display it on the screen 
+    and detect any color you choose in the next step
+    """
+    print(agree_message)
+    response = input("Do you agree with the rules and are ready to continue? [y/n]")
+    return response_handler(response)
+
+
+def display_selection():
+    selection_message = """
+    There are only 6 colors available:
+    1. Red
+    2. Green
+    3. Blue
+    4. Yellow
+    5. Purple
+    6. Cyan
+    
+    You can choose any color of this list you want. Just type name of color. Example: yellow. 
+    """
+    print(selection_message)
+    color = input("What color would you like to detect?")
+    return color_handler(color)
+
+
+def response_handler(response):
     while True:
         if response.lower() == 'y':
             return True
@@ -50,4 +78,24 @@ def response_encounter(response):
         else:
             response = input("Your answer was not recognized. Please answer only y (Yes) or n (No): ")
 
+
+def color_handler(color):
+
+    wrong_message = """
+    You color was not recognized. Please make sure you have selected a valid color from the list: 
+    1. Red
+    2. Green
+    3. Blue
+    4. Yellow
+    5. Purple
+    6. Cyan
+    Try again. Just type name of color. Example: yellow. 
+    """
+
+    while True:
+        if color.lower() in COLORS:
+            return COLORS[color]
+        else:
+            print(wrong_message)
+            color = input("What color would you like to detect?")
 
