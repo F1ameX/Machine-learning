@@ -29,6 +29,5 @@ This repository contains a simple computer vision project of detection any color
     ```
 ## Acknowledgements
 - The open-source community for their valuable libraries and tools.
-- 
 ## License
 This project is licensed under the MIT License.
