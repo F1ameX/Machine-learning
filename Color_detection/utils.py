@@ -3,12 +3,10 @@ import numpy as np
 
 
 COLORS = {
-    "red": np.array([255, 0, 0]),
     "green": np.array([0, 255, 0]),
     "blue": np.array([0, 0, 255]),
     "yellow": np.array([255, 255, 0]),
     "purple": np.array([255, 0, 255]),
-    "cyan": np.array([0, 255, 255])
 }
 
 
@@ -20,7 +18,7 @@ def color_limits(color):
     if hue >= 165:
         lower_limit = np.array([hue - 10, 100, 100], dtype=np.uint8)
         upper_limit = np.array([180, 255, 255], dtype=np.uint8)
-    elif hue <= 15:  # Lower limit for divided red hue
+    elif hue <= 15:
         lower_limit = np.array([0, 100, 100], dtype=np.uint8)
         upper_limit = np.array([hue + 10, 255, 255], dtype=np.uint8)
     else:
@@ -59,13 +57,11 @@ def display_agreement():
 
 def display_selection():
     selection_message = """
-    There are only 6 colors available:
-    1. Red
-    2. Green
-    3. Blue
-    4. Yellow
-    5. Purple
-    6. Cyan
+    There are only 4 colors available:
+    1. Green
+    2. Blue
+    3. Yellow
+    4. Purple
     
     You can choose any color of this list you want. Just type name of color. Example: yellow. 
     """
@@ -85,15 +81,12 @@ def response_handler(response):
 
 
 def color_handler(color):
-
     wrong_message = """
     You color was not recognized. Please make sure you have selected a valid color from the list: 
-    1. Red
-    2. Green
-    3. Blue
-    4. Yellow
-    5. Purple
-    6. Cyan
+    1. Green
+    2. Blue
+    3. Yellow
+    4. Purple
     Try again. Just type name of color. Example: yellow. 
     """
 
