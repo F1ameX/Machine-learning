@@ -3,7 +3,7 @@
 This repository contains a project aimed at classifying images of cats and dogs using the YOLO (You Only Look Once) model. The project involves data preparation, model training, and evaluation.
 
 ## Project Structure
-- `Cat-and-Dog-Classification/`
+- `Dog-cat-Classification/`
     - `sample.ipynb`: Jupyter notebook containing the entire workflow of data preparation, model training, and evaluation.
 
 ## Project Workflow
