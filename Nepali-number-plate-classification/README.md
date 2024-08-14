@@ -1,4 +1,4 @@
-# Digit Recognition neural network model
+# Nepali number plate classification
 This repository contains a simple classification model project aimed to classify the letters on Nepali number plates. The project uses the eponymous dataset consists different Nepali number plates.
 
 ## Project structure
