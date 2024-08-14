@@ -12,6 +12,7 @@ This repository contains various machine learning projects and exercises.
 7. **Binary Prediction of Poisonous Mushrooms (Kaggle competition)**
 8. **Nepali Number Plate Classification CV**
 9. **Dog/cat Classification CV**
+10. **Welding Defect Detection CV**
 ## Usage
 Each project folder includes Jupyter notebooks demonstrating data analysis, feature engineering, model building, and evaluation.
 Also, any projects are computer vision programs
