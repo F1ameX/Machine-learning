@@ -5,7 +5,7 @@ This repository contains a project aimed at classifying mushrooms as edible or p
 ## Project Structure
 
 - `Mushroom-Classification/`
-    - `sample.ipynb`: Jupyter notebooks used for data analysis and model training.
+    - `sample.ipynb`: Jupyter notebook used for data analysis and model training.
     - `README.md`: Project documentation.
 
 ## Project Workflow
